@@ -62,6 +62,11 @@ for d in data:
     if d == ("$ cd .."):
         cwd_location.pop()
 
+# print the tree
+for pre, fill, node in RenderTree(root):
+    treestr = f"{pre}{node.name}"
+    print(treestr)
+
 # Part 1
 
 target_filesize = 100000
