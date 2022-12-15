@@ -74,7 +74,6 @@ for pre, fill, node in RenderTree(root):
             file_size = sum([x.filesize for x in files])
         node.filesize = file_size
         if file_size <= target_filesize:
-            print(node.name)
             sizes.append(file_size)
 
 print(f"Small Directories: {sum(sizes)}")
